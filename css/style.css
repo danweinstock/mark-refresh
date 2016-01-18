@@ -1,0 +1,211 @@
+/*----------------- Home Page Formatting -------------- */
+/* nav bar formatting */
+body{
+	background-color: #FFFF00;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+.nav-list{
+	list-style: none;
+	display: inline-flex;
+}
+.welcome{
+	padding-left:1em;
+}
+.nav-list li{
+	padding-right: 1em;
+}
+.nav-list li a{
+	text-decoration: none;
+}
+.selected a{
+	color: #FF0000
+}
+.not-selected a{
+	color: #000;
+}
+.sun-image{
+	padding-left: 4em;
+}
+.intro-text{
+	font-weight: bold;
+}
+/* formatting of area with picture, nominee, parents' choice */
+.nominee{
+	margin-top: 16em;
+}
+.parent-choice{
+	background-image: url(../images/red-burst.png);
+	background-repeat: no-repeat;
+	padding-right: 7em;
+	padding-top: 0.8em;
+	margin-top: 10em;
+}
+.youtube a img{
+	width: 100%;
+	padding-right: 7em;
+	margin: 1em 0;
+}
+.message{
+	margin-right: 5em;
+}
+.hearts{
+	margin-top: 2em;
+}
+.flowers{
+	margin: 2em 0 2em 70em;
+}
+.quote, cite{
+	color: rgb(25, 122, 0);
+}
+.quote{
+	font-size: 17.5px;
+	margin: 0 0 1em;
+	padding: 10px 20px;
+}
+.buy{
+	color:#000;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 1em;
+}
+/* ---------- end of home page formatting ------------ */
+/* ---------- start of about me formatting ----------- */
+.about-name{
+	background-color: #66bdcd;
+	padding: 1em 0;
+	margin: 0 6em;
+	width: 900px;
+}
+@media screen and (max-width: 990px){
+	.about-name{
+		margin: 0;
+	}
+}
+.pic-row{
+	background-color: #fff;
+	margin-top: 2em;
+}
+.pic1, .pic2{
+	margin-right: 5em
+}
+.bio{
+	padding: 2em;
+	background-color: #66bdcd;
+}
+.bio-body, .bio-title, .booking-body{
+	text-align: left;
+}
+.bio-images{
+	margin-top: 1em;
+}
+
+.booking, .bio-title{
+	font-weight: bold;
+	font-size: 18px;
+}
+.bio-contact{
+	color: #0000FF;
+}
+.quote-content{
+	font-family: 'Lora', serif;
+	font-weight: 700;
+	margin-top: 3em;
+	width: 55%
+}
+.quote-cite{
+	font-size: 13px;
+}
+/*--------- End of About Me page formatting --------------- */
+/*-------- Start of Music page formatting ----------------- */
+.music-title{
+	background-color: #66bdcd;
+	padding: 1em 4em;
+}
+.sub-buy, .sub-buy a{
+	color: #8B0000;
+}
+.ready{
+	display: inline-flex;
+}
+.ready-title{
+	color: #008000;
+	font-family: 'Rancho', cursive;
+	font-size: 20px;
+	margin-top: 1em;
+}
+.ready-description{
+	font-weight: 700;
+	font-size: 16px;
+	margin: 0 5em;
+}
+.music-player{
+	width: 27%;
+	margin-top: 1em;
+}
+.parent-choice2{
+	background-image: url(../images/red-burst.png);
+	background-repeat: no-repeat;
+	padding-right: 7em;
+	padding-top: 0.8em;
+}
+.what-dreamers{
+	margin-right: 11em;
+	font-weight: 700;
+}
+.correct{
+	display: inline-flex;
+
+}
+.answer-a{
+	margin-left: 5em;
+	padding-right: 17em
+}
+.answer-b{
+	margin-right: 14.5em;
+}
+.answer-c{
+	margin-right: 9em
+}
+.answer-d{
+	margin-right: 17.5em;
+}
+.right-answer{
+	font-style: italic;
+}
+.hear{
+	color: #008000;
+	font-size: 16px;
+	font-weight: 700;
+	font-style: italic;
+	margin-top: 2em;
+}
+.samples{
+	margin-top: 2em;
+	font-weight: 700;
+	font-size: 12px
+}
+.heard, .what-dreamers{
+	font-size: 18px;
+	color: #0F1EFF;
+}
+.music-nominee{
+	margin-top: 2em;
+}
+.nominee-text{
+	margin-top: 1em;
+	font-size: 11px;
+	font-weight: 700;
+}
+.dreamer-sample{
+	background-color: #66bdcd;
+}
+.night, .freeze, .songs-for{
+	margin-left:3em;
+}
+/*-------- End of Music page formatting ------------ */
+
+
+
+
