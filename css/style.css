@@ -30,6 +30,31 @@ body{
 .intro-text{
 	font-weight: bold;
 }
+.small-name, .small-concert{
+	display: none;
+}
+@media screen and (max-width: 590px){
+	.small-concert{
+		display: block;
+		color: #FF4500;
+		font-family: 'Lora', serif;
+		font-weight: 700;
+	}
+	.big-concert{
+		display: none;
+	}
+}
+@media screen and (max-width: 530px){
+	.small-name{
+		display: block;
+		font-family: 'Rancho', cursive;
+		color:#FF4500;
+		font-size: 2em;
+	}
+	.big-name{
+		display: none;
+	}
+}
 /* formatting of area with picture, nominee, parents' choice */
 .nominee{
 	margin-top: 16em;
@@ -40,6 +65,9 @@ body{
 	padding-right: 7em;
 	padding-top: 0.8em;
 	margin-top: 10em;
+}
+.small-parent-choice{
+	background-image: url(../images/red-burst.png);
 }
 .youtube a img{
 	width: 100%;
@@ -55,6 +83,9 @@ body{
 .flowers{
 	margin: 2em 0 2em 70em;
 }
+.factor{
+	padding-right: 7em;
+}
 .quote, cite{
 	color: rgb(25, 122, 0);
 }
@@ -69,6 +100,30 @@ body{
 	font-weight: bold;
 	font-size: 20px;
 	margin-top: 1em;
+}
+.small-index{
+	display: none;
+}
+@media screen and (max-width: 1200px){
+	.parent-choice{
+		padding-right: 4em;
+	}
+}
+@media screen and (max-width: 1110px){
+	.flowers{
+		margin-left: 58em;
+	}
+}
+@media screen and (max-width: 992px){
+	.parent-choice{
+		padding-right: 0;
+	}
+	.youtube a img{
+		width: 125%;
+	}
+	.flowers{
+		margin-left: 45em;
+	}
 }
 /* ---------- end of home page formatting ------------ */
 /* ---------- start of about me formatting ----------- */
@@ -87,7 +142,10 @@ body{
 	background-color: #fff;
 	margin-top: 2em;
 }
-.pic1, .pic2{
+.walk-pic{
+	margin: 2em 0;
+}
+.pic1, .pic2, .walk-pic{
 	margin-right: 5em
 }
 .bio{
@@ -143,6 +201,7 @@ body{
 .music-player{
 	width: 27%;
 	margin-top: 1em;
+	margin-bottom: 1em;
 }
 .parent-choice2{
 	background-image: url(../images/red-burst.png);
@@ -198,12 +257,29 @@ body{
 	font-size: 11px;
 	font-weight: 700;
 }
-.dreamer-sample{
+.night, .freeze, .songs-for, .good-day{
 	background-color: #66bdcd;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
-.night, .freeze, .songs-for{
-	margin-left:3em;
+.favorite{
+	font-family: 'Rancho', cursive;
+	font-weight: 700;
+	font-size: 18px;
+	margin-top: 1em;
 }
+.favorite-name{
+	color: #4CC2D9;
+}
+.favorite-song{
+	font-size: 12px;
+	margin-left: 3em;
+	margin-bottom: 2em;	
+}
+.music-flowers{
+	margin-top: 1em;
+}
+
 /*-------- End of Music page formatting ------------ */
 
 
