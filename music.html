@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:400,700|Rancho' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	
 	<title>Little Superstars Music Presents</title>
 </head>
-<body>
-	<nav><img src="images/doodle_aboutstars1.png" alt="stars">
+
+
+	<nav>
+	<img src="images/doodle_aboutstars1.png" alt="stars" class="home-stars">
 		<ul class="nav-list">KIND RECORDS PROUDLY PRESENTS:
 			<li class="not-selected welcome"><a href="index.html">  Welcome  </a></li>
 			<li class="not-selected"><a href="about.html">  About Marky  </a></li>
@@ -21,56 +27,66 @@
 		<img src="images/music-header.png" alt="Music, Music, Music" class="music-title">
 		<div class="buy"><a href="http://www.maplemusic.com/dept.asp?dept_id=7075" class="buy" target="_blank">Click to buy your own CD or MP3's !</a></div>
 		<div class="sub-buy">(for bulk orders, contact <a href="mailto:markychai@gmail.com" target="_blank">Kind Records</a>)</div>
-		<img src="images/ready.jpg" alt="Are You Ready? cover">
+		<img src="images/ready.jpg" alt="Are You Ready? cover" class="ready-cover">
 		<div class="ready-title">ARE YOU READY?</div>
 		<div class="row ready">
-			<img src="images/star.png" alt="star">
 			<div class="ready-description">This new album features an all-star cast of music guests &amp; brand new original songs with positive messaging &amp; music that the whole family can enjoy. ARE YOU READY to sing, dance, go for a ride, plant a tree, catch a train, find buried treasure, cloud gaze, fly to the moon &amp; more!</div>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="hear col-xs-3">
 				Want to hear some songs?
 			</div>
 			<div class="col-xs-2 samples">
 				"CLOUD GAZING"<br>
-				<audio controls src="music/wagon.mp3" type="audio/mpeg" class="music-player">Listen Here</audio>
-
+				<button id="cloud-play" onclick="playCloud()" type="button"><i class="fa fa-play"></i></button>
+				<button id="cloud-pause" class="hide" onclick="pauseCloud()" type="button"><i class="fa fa-pause"></i> </button>
+				<audio id="cloud"><source src="music/cloud_gazing.mp3" type="audio/mpeg"></audio>
 			</div>
 			<div class="col-xs-2 samples">
 				"I'M A TREE"<Br>
 				(watch me grow)<br>
-				<audio controls src="music/wagon.mp3" type="audio/mpeg" class="music-player">Listen Here</audio>
+				<button id="tree-play" onclick="playTree()" type="button"><i class="fa fa-play"></i></button>
+				<button id="tree-pause" class="hide" onclick="pauseTree()" type="button"><i class="fa fa-pause"></i> </button>
+				<audio id="tree"><source src="music/tree.mp3" type="audio/mpeg"></audio>
 			</div>
 			<div class="col-xs-2 samples">
 				"ALWAYS"<br>
-				<audio controls src="music/wagon.mp3" type="audio/mpeg" class="music-player">Listen Here</audio>
+				<button id="always-play" onclick="playAlways()" type="button"><i class="fa fa-play"></i></button>
+				<button id="always-pause" class="hide" onclick="pauseAlways()" type="button"><i class="fa fa-pause"></i> </button>
+				<audio id="always"><source src="music/always.mp3" type="audio/mpeg"></audio>
 			</div>
 			<div class="col-xs-3">
-			<img src="images/birds.png" alt="">
+			<img src="images/birds.png" alt="" class="music-birds">
 			<div class="	parent-choice2">2013 &amp; 2010<br>Parents’ Choice<br> 
 				Award Winner <br><br></div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-4">
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
 				<p class="heard">Have your heard the first album?</p>
-				<img src="images/dreamers.jpg" alt="">				
+				<img src="images/dreamers.jpg" alt="" class="dreamer-img">
 			</div>
 			<div class="col-xs-7">
 				<p class="what-dreamers">
 					Songs for Dreamers Is?
 				</p>
-				<p class="answer-a">
-					a&#41; An album to take you through the day with gentle wake up songs, fun dances, stories and lullabies 
-				</p>
-				<p class="answer-b">b&#41; Music for children that grown-ups enjoy too</p>
-				<p class="answer-c">c&#41; A fun way to promote language and motor development</p>
-				<div class="correct">
-				<p class="answer-d">d&#41; All of the above</p>
-				 <p class="right-answer">&#42 Correct answer = d&#41;</p>	
+				<div class="answers">
+					<p class="answer-a">a&#41; An album to take you through the day with gentle wake up songs, fun dances, stories and lullabies 
+					</p>
+					<p class="answer-b">b&#41; Music for children that grown-ups enjoy too</p>
+					<p class="answer-c">c&#41; A fun way to promote language and motor development</p>
+					<div class="correct">
+					<p class="answer-d">d&#41; All of the above</p>
+					 <p class="right-answer">&#42 Correct answer = d&#41;</p>	
+				</div>
 				</div>
 			</div>
-		</div>
+
+	</div>
+	
 	<div class="row music-nominee">
 		<div class="col-xs-3">
 			<img src="images/nominee.jpg" alt="2011 Nominee"><br>
@@ -79,38 +95,42 @@
 			</div>
 		</div>
 			<div class="hear-more">
-				<img src="images/arrow.png" alt="">Want to hear more songs?
+				<img src="images/arrow.png" alt=""> Want to hear more songs?
 			</div>
-
+				
 				<div class="col-xs-2 good-day">
-						<img src="images/good-day.png" alt="Good Day">
-					<div>
-							<audio controls src="music/wagon.mp3" class="music-player"></audio><br>
-							"Good Day"
-					</div>					
+						<img src="images/good-day.png" alt="Good Day"><br>
+						<button id="good-play" onclick="playGood()" type="button"><i class="fa fa-play"></i></button>
+						<button class="hide" id="good-pause" onclick="pauseGood()" type="button"><i class="fa fa-pause"></i> </button>
+							<audio id="good_day"><source src="music/good_day.mp3" type="audio/mpeg"></audio><br>
+							"Good Day"					
 				</div>	
 				<div class="col-xs-2 songs-for">
-					<img src="images/songs-for.png" alt="Songs for Dreamers">
-						<div>
-							<audio controls src="music/wagon.mp3" class="music-player"></audio><br>
-							"Songs for Dreamers"
-						</div>				
+					<img src="images/songs-for.png" alt="Songs for Dreamers"><br>
+						<button id="dreamers-play" onclick="playDreamers()" type="button"><i class="fa fa-play"></i></button>
+						<button id="dreamers-pause" class="hide" onclick="pauseDreamers()" type="button"><i class="fa fa-pause"></i> </button>
+						<audio id="dreamers"><source src="music/song_for_dreamers.mp3" type="audio/mpeg"></audio><br>
+						"Songs for Dreamers"
 				</div>
 				<div class="col-xs-2 freeze">
-					<img src="images/freeze.jpg" alt="Freeze Dance">
+					<img src="images/freeze.jpg" alt="Freeze Dance"><br>
 					<div>
-						<audio controls src="music/wagon.mp3" class="music-player"></audio><br>
+					<button id="freeze-play" onclick="playFreeze()" type="button"><i class="fa fa-play"></i></button>
+					<button id="freeze-pause" class="hide" onclick="pauseFreeze()" type="button"><i class="fa fa-pause"></i> </button>
+					<audio id="freeze">
+						<source src="music/freeze_dance.mp3"></audio><br>
 						"Freeze Dance"<br>
 					</div>					
 				</div>
 				<div class="col-xs-2 night">
-					<img src="images/night.png" alt="Nice Owl">
-					<div>
-						<audio controls src="music/wagon.mp3" class="music-player"></audio><br>
-						"Night Owl"
-					</div>					
+					<img src="images/night.png" alt="Nice Owl" class="owl"><br>
+					<button id="night-play" onclick="playNight()" type="button"><i class="fa fa-play"></i></button>
+					<button id="night-pause" class="hide" onclick="pauseNight()" type="button"><i class="fa fa-pause"></i> </button>
+					<audio id="night"><source src="music/night_owl.mp3" type="audio/mpeg"></audio><br>
+					"Night Owl"				
 				</div>
 		</div>
+		
 		<div class="row">
 			<div class="col-xs-3">
 				<img src="images/hearts.png" alt="Hearts">
@@ -133,12 +153,106 @@
 				</div>
 				<img src="images/greenaccent.png" alt="">
 			</div>
+
 			<div class="col-xs-1">
 				<img src="images/flowers.png" alt="Flowers" class="music-flowers">
 			</div>
 		</div>
+
+
+<script> 
+
+var cloud_aud = document.getElementById("cloud");
+function	playCloud(){
+	cloud.play();
+	$("#cloud-play").addClass("hide");
+	$("#cloud-pause").removeClass("hide");
+}
+function pauseCloud(){
+	cloud.pause();
+	$("#cloud-play").removeClass("hide");
+	$("#cloud-pause").addClass("hide");
+}
+var tree_aud = document.getElementById("tree");
+
+function playTree(){
+	tree.play();
+	$("#tree-play").addClass("hide");
+	$("#tree-pause").removeClass("hide");
+}
+function pauseTree(){
+	tree.pause();
+	$("#tree-play").removeClass("hide");
+	$("#tree-pause").addClass("hide");
+}
+
+var always_aud = document.getElementById("always");
+
+function playAlways(){
+	always.play();
+	$("#always-play").addClass("hide");
+	$("#always-pause").removeClass("hide");
+}
+function pauseAlways(){
+	always.pause();
+	$("#always-play").removeClass("hide");
+	$("#always-pause").addClass("hide");
+}
+
+var night_aud = document.getElementById("night");
+
+function playNight() {
+     night.play();
+     $("#night-play").addClass("hide");
+     $("#night-pause").removeClass("hide");
+}
+function pauseNight(){
+     night.pause();
+     $("#night-play").removeClass("hide");
+     $("#night-pause").addClass("hide");
+}
+var freeze_aud = document.getElementById("freeze");
+
+function playFreeze() {
+     freeze.play();
+     $("#freeze-play").addClass("hide");
+     $("#freeze-pause").removeClass("hide");
+}
+function pauseFreeze(){
+     freeze.pause();
+     $("#freeze-play").removeClass("hide");
+     $("#freeze-pause").addClass("hide");
+}
+
+var dreamers_aud = document.getElementById("dreamers");
+
+function playDreamers() {
+     dreamers.play();
+     $("#dreamers-play").addClass("hide");
+     $("#dreamers-pause").removeClass("hide");
+}
+function pauseDreamers(){
+     dreamers.pause();
+     $("#dreamers-play").removeClass("hide");
+     $("#dreamers-pause").addClass("hide");
+}
+
+var good_aud = document.getElementById("good_day");
+
+function playGood(){
+		good_day.play();
+	  $("#good-play").addClass("hide");
+  	$("#good-pause").removeClass("hide");
 	
-	</div>
-	
-</body>
-</html>
+}
+function pauseGood(){
+		good_day.pause(); 
+  	$("#good-play").removeClass("hide")
+  	$("#good-pause").addClass("hide")
+}
+
+
+
+
+</script> 
+

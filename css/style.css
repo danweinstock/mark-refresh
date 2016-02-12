@@ -1,5 +1,6 @@
 /*----------------- Home Page Formatting -------------- */
 /* nav bar formatting */
+
 body{
 	background-color: #FFFF00;
 	text-align: center;
@@ -7,6 +8,8 @@ body{
 }
 .nav-list{
 	list-style: none;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
 .welcome{
@@ -30,30 +33,14 @@ body{
 .intro-text{
 	font-weight: bold;
 }
-.small-name, .small-concert{
+.big-name{
+	width: 50%;
+}
+.small-index{
 	display: none;
 }
-@media screen and (max-width: 590px){
-	.small-concert{
-		display: block;
-		color: #FF4500;
-		font-family: 'Lora', serif;
-		font-weight: 700;
-	}
-	.big-concert{
-		display: none;
-	}
-}
-@media screen and (max-width: 530px){
-	.small-name{
-		display: block;
-		font-family: 'Rancho', cursive;
-		color:#FF4500;
-		font-size: 2em;
-	}
-	.big-name{
-		display: none;
-	}
+.small-choice{
+	display: none;
 }
 /* formatting of area with picture, nominee, parents' choice */
 .nominee{
@@ -62,9 +49,10 @@ body{
 .parent-choice{
 	background-image: url(../images/red-burst.png);
 	background-repeat: no-repeat;
-	padding-right: 7em;
+	padding-right: 8em;
 	padding-top: 0.8em;
 	margin-top: 10em;
+	margin-left: 1em;
 }
 .small-parent-choice{
 	background-image: url(../images/red-burst.png);
@@ -100,43 +88,16 @@ body{
 	font-weight: bold;
 	font-size: 20px;
 	margin-top: 1em;
+	padding-bottom: 1em;
 }
-.small-index{
-	display: none;
-}
-@media screen and (max-width: 1200px){
-	.parent-choice{
-		padding-right: 4em;
-	}
-}
-@media screen and (max-width: 1110px){
-	.flowers{
-		margin-left: 58em;
-	}
-}
-@media screen and (max-width: 992px){
-	.parent-choice{
-		padding-right: 0;
-	}
-	.youtube a img{
-		width: 125%;
-	}
-	.flowers{
-		margin-left: 45em;
-	}
-}
+
 /* ---------- end of home page formatting ------------ */
 /* ---------- start of about me formatting ----------- */
 .about-name{
 	background-color: #66bdcd;
 	padding: 1em 0;
-	margin: 0 6em;
+	margin: 0 9em;
 	width: 900px;
-}
-@media screen and (max-width: 990px){
-	.about-name{
-		margin: 0;
-	}
 }
 .pic-row{
 	background-color: #fff;
@@ -175,16 +136,19 @@ body{
 .quote-cite{
 	font-size: 13px;
 }
+
 /*--------- End of About Me page formatting --------------- */
 /*-------- Start of Music page formatting ----------------- */
 .music-title{
 	background-color: #66bdcd;
-	padding: 1em 4em;
+	padding: 1em 2em;
 }
 .sub-buy, .sub-buy a{
 	color: #8B0000;
 }
 .ready{
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
 .ready-title{
@@ -198,11 +162,7 @@ body{
 	font-size: 16px;
 	margin: 0 5em;
 }
-.music-player{
-	width: 27%;
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
+
 .parent-choice2{
 	background-image: url(../images/red-burst.png);
 	background-repeat: no-repeat;
@@ -214,11 +174,15 @@ body{
 	font-weight: 700;
 }
 .correct{
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 
 }
+.answers{
+	text-align: left;
+}
 .answer-a{
-	margin-left: 5em;
 	padding-right: 17em
 }
 .answer-b{
@@ -240,6 +204,10 @@ body{
 	font-style: italic;
 	margin-top: 2em;
 }
+button{
+	margin-top: 1em;
+	height: 100%
+}
 .samples{
 	margin-top: 2em;
 	font-weight: 700;
@@ -260,7 +228,8 @@ body{
 .night, .freeze, .songs-for, .good-day{
 	background-color: #66bdcd;
 	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
+	margin-top: 1em;
 }
 .favorite{
 	font-family: 'Rancho', cursive;
@@ -280,8 +249,617 @@ body{
 	margin-top: 1em;
 }
 
+
+
+
+
+
+
 /*-------- End of Music page formatting ------------ */
+/*-------- Concert Page Formatting ----*/
+.concert-banner{
+	background-color: #66bdcd;
+	padding: 1em 2em;
+	margin-bottom: 1em;
+}
+.calendar-section, .concert-program{
+	text-align: left;
+	font-weight: bold;
 
+}
+.calendar{
+	display: inline;
+	background-color: #add05a;
+	padding: 3px 2em 3px 3px;
+}
+.more-concerts{
+	color:#0000FF;
+}
+.concert-dates{
+	color: #B22222;
+}
+.concert-program{
+	background-color: #66bdcd;
+	display: inline-block;
+	padding: 1em;
+}
+.concert-contact, .concert-booking{
+	background-color: #66bdcd;
+	text-align: left;
+	padding: 1em;
 
+}
+.concert-contact{
+	font-weight: normal;
+	padding: 1em 0 0 0;
+}
+.green-concert{
+	background-color: #add05a;
+	margin-top: 1em;
+	padding: 1em;
+}
+.concert-booking{
+	font-weight: bold;
+	margin-top: 1em;
+}
+.concert-booking u{
+	font-size: 17px;
+}
+.world{
+	color: #F83009;
+	text-align: left;
+	margin-top: 1em;
+	font-weight: bold;
+}
 
+.concert-flowers{
+	float: right;
+}
+/*-------  Media queries ---------*/
+@media screen and (max-width: 1200px){
+	.parent-choice{
+		padding-right: 7em;
+	}
+}
+@media screen and (max-width:1198px){
+	.parent-choice2{
+		padding-right: 4em;
+	}
+}
+@media screen and (max-width:1120px){
+	.parent-choice{
+		padding-right: 6em;
+	}
+	.factor{
+		padding-right: 5em;
+	}
+	.youtube a img{
+		margin: 1em 1em;
+	}
+}
+@media screen and (max-width: 1110px){
+	.flowers{
+		margin-left: 58em;
+	}
+	.about-name{
+		margin: 0 6em;
+	}
+}
+@media screen and (max-width:1100px){
+	.parent-choice{
+		padding-right: 5em;
+	}
+}
+@media screen and (max-width: 1045px){
+	.parent-choice{
+		padding-right: 4em;
+	}
+}
+@media screen and (max-width: 1030px){
+	.about-name{
+		margin: 0 3em;
+	}
+}
+@media screen and (max-width: 1000px){
+	.parent-choice{
+		padding-right: 3em;
+	}
+}
+@media screen and (max-width: 992px){
+	.nav-list{
+		width: 80%
+	}
+	.big-name{
+		width: 65%
+	}
+	.parent-choice2{
+		padding-right: 0;
+	}
+	.youtube a img{
+		width: 125%;
+	}
+	.flowers{
+		margin-left: 45em;
+	}
+	.blue-stripe{
+		width: 80%;
+	}
+	.answer-b, .answer-c{
+		margin-right: 14em;
+	}
+	.answer-d{
+		margin-right: 12em;
+	}
+	.about-name{
+		width: 100%;
+		margin-left: 0;
+	}
+	.who-is{
+		width: 125%;
+		margin-left: -3em;
+	}
+	.pic-row{
+		width: 88%;
+		margin-left: 5em;
+	}
+	.pic3{
+		margin-bottom: 2em;
+	}
+}
+@media screen and (max-width: 948px){
+	.good-day, .freeze, .night{
+		padding-bottom: 3.4em;
+	}
+	.parent-choice{
+		padding-right: 2em;
+	}
+}
+@media screen and (max-width: 891px){
+	.parent-choice{
+		padding-right: 1em;
+	}
+}
+@media screen and (max-width: 840px){
+	.home-stars{
+		display: none;
+	}
+	.parent-choice{
+		padding-right: 0;
+	}
+}
 
+@media screen and (max-width: 800px){
+	.music-birds{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 785px){
+	.parent-choice{
+		padding-left: 1em;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.answer-d{
+		margin-right: 9.7em;
+	}
+
+}
+@media screen and (max-width: 755px){
+	
+	.small-index{
+		display: block;
+	}
+	.big-flowers, .big-choice, .big-nominee{
+		display:none;
+	}
+	.red-shirt{
+		margin-left: 25%;
+		margin-bottom: 2em;
+	}
+	.hearts{
+		display: none;
+	}
+	.youtube a img{
+		width: 50%;
+		padding-right: 0;
+	}
+	.parent-choice{
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 39%;
+		padding-right: 41%;
+		padding-top: 2%;
+		font-size: 13px;
+	}
+	.factor{
+		padding-right: 0;
+	}
+	.message{
+		margin-right: 0;
+	}
+	.answer-d{
+		margin-right: 9em;
+	}
+}
+
+@media screen and (max-width: 740px){
+	.dreamer-img{
+		width: 100%;
+	}
+	
+	.songs-for{
+		padding-bottom: 1.2em
+	}
+	.night, .freeze, .good-day{
+		padding-bottom: 2.6em;
+	}
+	.parent-choice2{
+		font-size: 13px;
+		margin-left: -2em;
+		padding-top: 1.1em;
+		padding-right: 2em;
+	}
+
+}
+
+@media screen and (max-width: 710px){
+	.blue-stripe{
+		width: 75%;
+	}
+	.freeze{
+		padding-bottom: 1.2em;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.parent-choice2{
+		padding-right: 1em;
+	}
+	.answer-d{
+		margin-right: 16em;
+	}
+	.ready-cover{
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 650px){
+	.parent-choice2{
+		margin-left: -3em;
+	}
+	.answer-a{
+		padding-right: 13em;
+	} 
+	.answer-d{
+		margin-right: 13.5em;
+	}
+
+}
+
+@media screen and (max-width: 640px){
+	.pic-row{
+		margin-left: 3em;
+	}
+	.walk-pic{
+		margin-left: 6em;
+	}
+}
+
+@media screen and (max-width: 635px){
+	.parent-choice{
+		padding-right: 40%;
+		margin-left: 36%;
+	}
+	.concert-banner, .music-title{
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 598px){
+	.about-name{
+		width: 102%;
+	}
+}
+@media screen and (max-width: 596px){
+	.night{
+		padding-bottom: 2.6em;
+	}
+}
+@media screen and (max-width: 595px){
+	.good-day{
+		padding-bottom: 2.6em;
+	}
+}
+@media screen and (max-width: 580px){
+	.pic3{
+		margin: 2em 0;
+	}
+	.walk-pic, .pic1{
+		margin-left: 5em;
+	}
+	.about-name{
+		width: 100%;
+	}
+	.who-is-name{
+		width: 85%;
+	}
+	.night{
+		padding-bottom: 2.65em;
+	}
+}
+
+@media screen and (max-width: 568px){
+	
+	.owl{
+		width: 100%;
+	}
+	.night{
+		padding-bottom: 2.75em;
+	}
+	.parent-choice2{
+		padding-right: 0;
+	}
+	.blue-stripe{
+		width: 60%
+	}
+	#night-play, #night-pause{
+		margin-top: 2em;
+	}
+}
+
+@media screen and (max-width: 566px){
+	.night{
+		padding-bottom: 1.35em;
+	}
+}
+@media screen and (max-width: 565px){
+	.good-day{
+		padding-bottom:1.2em; 
+	}
+}
+@media screen and (max-width: 561px){
+	.night{
+		padding-bottom: 1.4em;
+	}
+}
+@media screen and (max-width: 554px){
+	.night{
+		padding-bottom: 1.5em;
+	}
+}
+@media screen and (max-width: 550px){
+	.parent-choice{
+		padding-right: 39%;
+		padding-top: 3%; 
+		margin-left: 35%;
+	}
+	.nav-list{
+		font-size: 13px;
+	}
+	.red-shirt{
+		margin-left: 16%;
+	}
+	.night{
+		padding-bottom: 1.5em;
+	}
+	.concert-booking{
+		width: 125%;
+	}
+}
+@media screen and (max-width: 547px){
+	.night{
+		padding-bottom: 1.6em;
+	}
+}
+@media screen and (max-width: 540px){
+	.night{
+		padding-bottom: 1.65em;
+	}
+}
+
+@media screen and (max-width: 537px){
+	.songs-for{
+		padding-bottom: 1.15em;
+	}
+	.good-day, .freeze{
+		padding-bottom: 2.6em;
+	}
+	.night{
+		padding-bottom: 3em;
+	}
+}
+@media screen and (max-width: 534px){
+	.night{
+		padding-bottom: 3.1em;
+	}
+	.parent-choice{
+		padding-right: 37%;
+	}
+}
+@media screen and (max-width: 526px){
+	.night{
+		padding-bottom: 3.15em;
+	}
+}
+@media screen and (max-width: 519px){
+	.night{
+		padding-bottom: 3.2em;
+	}
+}
+@media screen and (max-width: 512px){
+	.night{
+		padding-bottom: 3.25em;
+	}
+}
+@media screen and (max-width: 510px){
+	.bio{
+		margin-left: 3em;
+	}
+	.night{
+		padding-bottom: 3.3em;
+	}
+	.concert-program, .concert-booking{
+		margin-left: -2.1em;
+	}
+}
+@media screen and (max-width: 505px){
+	.night{
+		padding-bottom: 3.35em;
+	}
+}
+@media screen and (max-width: 498px){
+	.night{
+		padding-bottom: 3.4em;
+	}
+	.parent-choice{
+		padding-right: 35%;
+	}
+}
+@media screen and (max-width:491px){
+	.night{
+		padding-bottom: 3.5em;
+	}
+}
+@media screen and (max-width:484px){
+	.night{
+		padding-bottom: 3.6em;
+	}
+}
+@media screen and (max-width: 480px){
+	
+	.music-title{
+		width: 100%;
+	}
+	.parent-choice2{
+		background-color: red;
+		background-image: none;
+		border-radius: 50%;
+		margin-left: -2em;
+	}
+	.good-day, .freeze{
+		padding-bottom: 2em;
+	}
+	.good-day{
+		margin-left: 2em;
+	}
+	.songs-for{
+		padding-bottom: 1.4em;
+		font-size: 13px;
+	}
+	.night{
+		padding-bottom: 2em;
+	}
+	.answer-a{
+		padding-right: 9em;
+	}
+	.answer-b, .answer-c{
+		margin-right: 9em;
+	}
+	.answer-d{
+		margin-right: 7.5em;
+	}
+	#night-play, #night-pause{
+		margin-top: 3em;	
+	}
+}
+@media screen and (max-width:474px){
+	.songs-for{
+		padding-bottom: 1.45em;
+	}
+	.night{
+		padding-bottom: 2.05em;
+	}
+}
+@media screen and (max-width: 470px){
+	.night{
+		padding-bottom: 2.15em;
+	}
+}
+@media screen and (max-width:463px){
+	.night{
+		padding-bottom: 2.2em;
+	}
+}
+@media screen and (max-width: 456px){
+	.night{
+		padding-bottom: 2.25em;
+	}
+}
+@media screen and (max-width: 450px){
+	.big-name{
+		width: 80%
+	}
+	.parent-choice{
+		padding-right: 36%;
+		padding-top: 4%;
+		margin-left: 31%;
+	}
+	.message{
+		margin-left: 3em;
+	}
+	.intro-text{
+		margin-left: -4em;
+	}
+	.about-name, .pic-row{
+		margin-left: 2em;
+	}
+	.walk-pic, .pic1{
+		margin-left: 3em;
+	}
+	.concert-booking{
+		width: 145%;
+	}
+}
+@media screen and (max-width:449px){
+	.night{
+		padding-bottom: 2.35em;
+	}
+}
+@media screen and (max-width:441px){
+	.night{
+		padding-bottom: 2.4em;
+	}
+}
+@media screen and (max-width: 435px){
+	.night{
+		padding-bottom: 2.5em;
+	}
+}
+@media screen and (max-width: 428px){
+	.night{
+		padding-bottom: 2.55em;
+	}
+}
+@media screen and (max-width: 426px){
+	#night-play, #night-pause{
+		margin-top: 3em;
+	}
+}
+@media screen and (max-width: 421px){
+	.night{
+		padding-bottom: 2.65em;
+	}
+	.parent-choice{
+		padding-right: 34%;
+	}
+}
+@media screen and (max-width: 414px){
+	.night{
+		padding-bottom: 2.7em;
+	}
+}
+@media screen and (max-width: 406px){
+	.night{
+		padding-bottom: 2.8em;
+	}
+}
+@media screen and (max-width: 400px){
+	.night{
+		padding-bottom: 2em;
+	}
+	#night-play, #night-pause{
+		margin-top: 3.8em;
+	}
+}
